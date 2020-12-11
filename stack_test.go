@@ -42,3 +42,12 @@ func TestStacks(t *testing.T) {
 		})
 	})
 }
+
+func BenchmarkStack(b *testing.B) {
+	s := c.MakeStack()
+
+	for n := 0; n < b.N; n++ {
+		s.Push("HELLO")
+		s.Pop()
+	}
+}
