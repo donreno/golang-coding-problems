@@ -43,3 +43,20 @@ func TestGraph(t *testing.T) {
 	})
 
 }
+
+func BenchmarkGraph(b *testing.B) {
+	g := c.MakeGraphNode(1, 1)
+	node1 := c.MakeGraphNode(2, 2)
+	node2 := c.MakeGraphNode(3, 3)
+	node3 := c.MakeGraphNode(4, 4)
+
+	node1.AddNode(node3)
+	node3.AddNode(node2)
+	node2.AddNode(g)
+
+	g.AddNode(node1)
+
+	for n := 0; n < b.N; n++ {
+		g.GetNode(3)
+	}
+}
