@@ -17,4 +17,4 @@ Currently i've implemented couple of examples from different sources and couple 
  - [Queue example](queue.go) and corresponding tests [here](queue_test.go).
  - [Balanced strings example](balanced_strings.go) and corresponding [tests](balanced_strings_test.go)
  - [String permutations coding problem](permutations.go) and corresponding [tests](permutations_test.go)
-
+ - [String has unique characters coding problem](string_with_unique_characters.go) and corresponding [tests](string_with_unique_characters_test.go)

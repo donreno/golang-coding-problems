@@ -8,9 +8,8 @@ import (
 	c "golang-coding-problems"
 )
 
-/** Given a string A and a string B, find the permutations of A on B
-*   e.g: if A is "abc" and B is "acbdbacaf1abc", then there are 3 permutations of A on B
- */
+// Given two strings, write a method to decide if one is a permutation of the other.
+// e.g: if A is "abc" and B is "acbdbacaf1abc", then there are 3 permutations of A on B
 func TestPermutations(t *testing.T) {
 	g := goblin.Goblin(t)
 
