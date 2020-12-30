@@ -16,4 +16,5 @@ Currently i've implemented couple of examples from different sources and couple 
  - [Graph example](graph.go) created in order to implente DFS and BFS in go, test can be found [here](graph_test.go).
  - [Queue example](queue.go) and corresponding tests [here](queue_test.go).
  - [Balanced strings example](balanced_strings.go) and corresponding [tests](balanced_strings_test.go)
+ - [String permutations coding problem](permutations.go) and corresponding [tests](permutations_test.go)
 
