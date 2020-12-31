@@ -12,7 +12,7 @@ import (
 func TestStringWithUniqueCharacters(t *testing.T) {
 	g := goblin.Goblin(t)
 
-	g.Describe("String With Unique Characters (Solved with structs)", func() {
+	g.Describe("String With Unique Characters (Solved with structs [map])", func() {
 
 		g.It("Should return false if string is empty", func() {
 			g.Assert(c.HasUniqueChars("")).IsFalse()
