@@ -35,3 +35,4 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Urlify | [urlify.go](internal/arrays/urlify.go) | [tests](internal/arrays/urlify_test.go) |
 | Palindrome permutation | [palindrome_permutation.go](internal/arrays/palindrome_permutation.go) | [tests](internal/arrays/palindrome_permutation_test.go) |
 | One edit away | [one_away.go](internal/arrays/one_away.go) | [tests](internal/arrays/one_away_test.go) |
+| String compression | [string_compression.go](internal/arrays/string_compression.go) | [tests](internal/arrays/string_compression_test.go) |
