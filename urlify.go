@@ -10,7 +10,9 @@ func Urlify(input []rune, length int) bool {
 	}
 
 	lastIndex := length - 1
+	lastBottomIndex := lastIndex
 
+	// Calculates the last non-right whitespace index
 	for ; lastIndex > 0 && input[lastIndex] == singleSpaceRune; lastIndex-- {
 	}
 
@@ -18,25 +20,35 @@ func Urlify(input []rune, length int) bool {
 		return false
 	}
 
-	tmpUrlified := []rune("")
+	availableSpaces := lastBottomIndex - lastIndex
 
-	for i := 0; i <= lastIndex; i++ {
-		if input[i] != singleSpaceRune {
-			tmpUrlified = append(tmpUrlified, input[i])
-		} else {
-			tmpUrlified = append(tmpUrlified, urlSpace...)
+	// Counts Whitespaces
+	whitespaceCount := 0
+	for i := lastIndex; i >= 0; i-- {
+		if input[i] == singleSpaceRune {
+			whitespaceCount++
 		}
 	}
 
-	if len(tmpUrlified) != length {
+	// Checks if we have enough whitespaces to urlify the ones in between
+	if whitespaceCount*2-availableSpaces > 0 {
 		return false
 	}
 
-	for i, r := range tmpUrlified {
-		input[i] = r
-	}
+	for i, bottomIndex := lastIndex, length-1; i >= 0; i-- {
+		if input[i] != singleSpaceRune {
+			input[bottomIndex] = input[i]
+			bottomIndex--
+		} else {
+			whitespaceCount++
 
-	_ = tmpUrlified
+			input[bottomIndex] = '0'
+			input[bottomIndex-1] = '2'
+			input[bottomIndex-2] = '%'
+
+			bottomIndex = bottomIndex - 3
+		}
+	}
 
 	return true
 }
