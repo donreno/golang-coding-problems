@@ -1,11 +1,11 @@
-package golang_coding_problems_test
+package arrays_test
 
 import (
 	"testing"
 
 	goblin "github.com/franela/goblin"
 
-	c "golang-coding-problems"
+	a "golang-coding-problems/internal/arrays"
 )
 
 /*
@@ -22,31 +22,31 @@ func TestUrlify(t *testing.T) {
 		// will be using runes slice to check modifications after
 		g.It("Should return false if string is empty", func() {
 			runes := []rune("")
-			g.Assert(c.Urlify(runes, 0)).IsFalse()
+			g.Assert(a.Urlify(runes, 0)).IsFalse()
 			g.Assert(runes).Equal([]rune(""))
 		})
 
 		g.It("Should return false if string has only whitespaces", func() {
 			runes := []rune("   ")
-			g.Assert(c.Urlify(runes, 0)).IsFalse()
+			g.Assert(a.Urlify(runes, 0)).IsFalse()
 			g.Assert(runes).Equal([]rune("   "))
 		})
 
 		g.It("Should return false if string does not have enough right spaces to admit all replacements", func() {
 			runes := []rune("Mr John Smith   ")
-			g.Assert(c.Urlify(runes, 16)).IsFalse()
+			g.Assert(a.Urlify(runes, 16)).IsFalse()
 			g.Assert(runes).Equal([]rune("Mr John Smith   "))
 		})
 
 		g.It("Should return true if string has enough right spaces to admit all replacements", func() {
 			runes := []rune("Mr John Smith    ")
-			g.Assert(c.Urlify(runes, 17)).IsTrue()
+			g.Assert(a.Urlify(runes, 17)).IsTrue()
 			g.Assert(runes).Equal([]rune("Mr%20John%20Smith"))
 		})
 
 		g.It("Should return true if string has enough right spaces to admit all replacements", func() {
 			runes := []rune(" Mr John Smith      ")
-			g.Assert(c.Urlify(runes, 20)).IsTrue()
+			g.Assert(a.Urlify(runes, 20)).IsTrue()
 			g.Assert(runes).Equal([]rune("%20Mr%20John%20Smith"))
 		})
 	})

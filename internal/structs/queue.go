@@ -1,4 +1,4 @@
-package golang_coding_problems
+package structs
 
 // Queue represents a Queue
 type Queue interface {
@@ -17,6 +17,7 @@ type queueNode struct {
 	next  *queueNode
 }
 
+// MakeQueue creates a new Queue
 func MakeQueue() Queue {
 	return new(queue)
 }

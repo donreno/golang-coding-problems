@@ -1,7 +1,7 @@
-package golang_coding_problems_test
+package structs_test
 
 import (
-	c "golang-coding-problems"
+	s "golang-coding-problems/internal/structs"
 	"testing"
 
 	goblin "github.com/franela/goblin"
@@ -11,14 +11,14 @@ func TestGraph(t *testing.T) {
 	g := goblin.Goblin(t)
 
 	g.Describe("Graphs", func() {
-		var graph *c.GraphNode
+		var graph *s.GraphNode
 
 		g.BeforeEach(func() {
-			graph = c.MakeGraphNode(1, 1)
+			graph = s.MakeGraphNode(1, 1)
 		})
 
 		g.It("Should add Nodes properly", func() {
-			otherNode := c.MakeGraphNode(2, 2)
+			otherNode := s.MakeGraphNode(2, 2)
 
 			graph.AddNode(otherNode)
 
@@ -26,7 +26,7 @@ func TestGraph(t *testing.T) {
 		})
 
 		g.It("Should get a node if added", func() {
-			otherNode := c.MakeGraphNode(2, 2)
+			otherNode := s.MakeGraphNode(2, 2)
 
 			graph.AddNode(otherNode)
 
@@ -45,10 +45,10 @@ func TestGraph(t *testing.T) {
 }
 
 func BenchmarkGraph(b *testing.B) {
-	g := c.MakeGraphNode(1, 1)
-	node1 := c.MakeGraphNode(2, 2)
-	node2 := c.MakeGraphNode(3, 3)
-	node3 := c.MakeGraphNode(4, 4)
+	g := s.MakeGraphNode(1, 1)
+	node1 := s.MakeGraphNode(2, 2)
+	node2 := s.MakeGraphNode(3, 3)
+	node3 := s.MakeGraphNode(4, 4)
 
 	node1.AddNode(node3)
 	node3.AddNode(node2)

@@ -1,4 +1,4 @@
-package golang_coding_problems
+package arrays
 
 // CountPermutationsOfAonB counts permutations of A on B
 func CountPermutationsOfAonB(a, b string) int {

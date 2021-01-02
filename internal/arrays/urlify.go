@@ -1,4 +1,4 @@
-package golang_coding_problems
+package arrays
 
 var singleSpaceRune = rune(' ')
 var urlSpace = []rune("%20")

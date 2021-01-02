@@ -1,21 +1,21 @@
-package golang_coding_problems_test
+package structs_test
 
 import (
 	"testing"
 
 	goblin "github.com/franela/goblin"
 
-	c "golang-coding-problems"
+	s "golang-coding-problems/internal/structs"
 )
 
 func TestLinkedList(t *testing.T) {
 	g := goblin.Goblin(t)
 
 	g.Describe("Linked List", func() {
-		var ll *c.LinkedList
+		var ll *s.LinkedList
 
 		g.BeforeEach(func() {
-			ll = new(c.LinkedList)
+			ll = new(s.LinkedList)
 		})
 
 		g.It("Should create an empty linkedlist first", func() {

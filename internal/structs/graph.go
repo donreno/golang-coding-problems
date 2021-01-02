@@ -1,4 +1,4 @@
-package golang_coding_problems
+package structs
 
 // GraphNode Representing a Graph node
 type GraphNode struct {

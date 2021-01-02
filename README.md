@@ -10,13 +10,26 @@ To run tests we just need to run tests either with `make test` on the command li
 ### Running tets with coverage
 To run tests with coverage just run with `make coverage`
 
-## Current examples
-Currently i've implemented couple of examples from different sources and couple of data structs to be able to solve basic problems.
- - [Stack example](stack.go) and corresponding [tests](stack_test.go) (actually had to implement this because of balanced string problem but still is a good example)
- - [Graph example](graph.go) created in order to implente DFS and BFS in go, test can be found [here](graph_test.go).
- - [Queue example](queue.go) and corresponding tests [here](queue_test.go).
- - [Balanced strings example](balanced_strings.go) and corresponding [tests](balanced_strings_test.go)
- - [String count permutations coding problem](count_permutations.go) and corresponding [tests](count_permutations_test.go)
- - [String has unique characters coding problem](string_with_unique_characters.go) and corresponding [tests](string_with_unique_characters_test.go)
- - [Urlify coding problem](urlify.go) and corresponding [tests](urlify_test.go)
- - [Check permutation coding problem](permutation.go) and corresponding [tests](permutation_test.go)
+## Package organization
+I have implemented different examples of coding problems, structure implementations and many others distributed in different packages in this code base.
+
+### structs
+The structs package contains all the structs I have implemented im golang either to re-learn how it's built or to solve an specific problem.
+
+| struct | implementation | tests |
+| --- | --- | --- | 
+| Graph | [graph.go](internal/structs/graph.go) | [tests](internal/structs/graph_test.go) |
+| Linked List | [linked_list.go](internal/structs/linked_list.go) | [tests](internal/structs/linked_list_test.go) |
+| Queue | [queue.go](internal/structs/queue.go) | [tests](internal/structs/queue_test.go) |
+| Stack | [stack.go](internal/structs/stack.go) | [tests](internal/structs/stack_test.go) |
+
+## arrays
+Arrays package contains coding problems corresponding to arrays or strings.
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Balanced Strings | [balanced_string.go](internal/arrays/balanced_string.go) | [tests](internal/arrays/balanced_string_test.go) |
+| Count Permutations | [count_permutations.go](internal/arrays/count_permutations.go) | [tests](internal/arrays/count_permutations_test.go) |
+| Permutations | [permutation.go](internal/arrays/permutation.go) | [tests](internal/arrays/permutation_test.go) |
+| String with unique characters | [string_with_unique_characters.go](internal/arrays/string_with_unique_characters.go) | [tests](internal/arrays/string_with_unique_characters_test.go) |
+| Urlify | [urlify.go](internal/arrays/urlify.go) | [tests](internal/arrays/urlify_test.go) |

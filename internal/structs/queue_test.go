@@ -1,7 +1,7 @@
-package golang_coding_problems_test
+package structs_test
 
 import (
-	c "golang-coding-problems"
+	s "golang-coding-problems/internal/structs"
 	"testing"
 
 	goblin "github.com/franela/goblin"
@@ -11,10 +11,10 @@ func TestQueue(t *testing.T) {
 	g := goblin.Goblin(t)
 
 	g.Describe("Queues", func() {
-		var q c.Queue
+		var q s.Queue
 
 		g.BeforeEach(func() {
-			q = c.MakeQueue()
+			q = s.MakeQueue()
 		})
 
 		g.It("Should create empty queue", func() {
@@ -42,7 +42,7 @@ func TestQueue(t *testing.T) {
 }
 
 func BenchmarkQueue(b *testing.B) {
-	q := c.MakeQueue()
+	q := s.MakeQueue()
 
 	for n := 0; n < b.N; n++ {
 		q.Enqueue("HELLO")

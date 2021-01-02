@@ -1,4 +1,4 @@
-package golang_coding_problems
+package arrays
 
 // IsBpermutationOfA Checks if B is permutation of A
 func IsBpermutationOfA(a, b string) bool {

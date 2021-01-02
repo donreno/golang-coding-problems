@@ -1,4 +1,4 @@
-package golang_coding_problems
+package arrays
 
 // HasUniqueChars checks if a string has only unique chars
 func HasUniqueChars(s string) bool {

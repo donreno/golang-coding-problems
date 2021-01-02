@@ -1,4 +1,4 @@
-package golang_coding_problems
+package structs
 
 type LinkedList struct {
 	head *ListNode

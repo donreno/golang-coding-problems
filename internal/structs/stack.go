@@ -1,4 +1,4 @@
-package golang_coding_problems
+package structs
 
 // Stack Simple stack implementation
 type Stack interface {

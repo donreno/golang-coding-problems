@@ -1,6 +1,9 @@
-package golang_coding_problems
+package arrays
 
-import "strings"
+import (
+	s "golang-coding-problems/internal/structs"
+	"strings"
+)
 
 const closeParentheses = "}])>"
 
@@ -9,7 +12,7 @@ var parenthesesMatches map[string]string
 // CheckBalancedString checks if a string's parentheses are balanced
 func CheckBalancedString(str string) bool {
 	tokens := strings.Split(str, "")
-	parenthesesStack := MakeStack()
+	parenthesesStack := s.MakeStack()
 
 	for _, token := range tokens {
 		_, isOpenParentheses := parenthesesMatches[token]
