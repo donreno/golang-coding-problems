@@ -28,6 +28,7 @@ func TestOneAway(t *testing.T) {
 			g.Assert(a.IsOneAway("pale", "ple")).IsTrue()
 			g.Assert(a.IsOneAway("pales", "pale")).IsTrue()
 			g.Assert(a.IsOneAway("pale", "pale")).IsTrue()
+			g.Assert(a.IsOneAway("pale", "bale")).IsTrue()
 		})
 	})
 }
