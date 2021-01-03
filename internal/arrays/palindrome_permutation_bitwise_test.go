@@ -13,29 +13,29 @@ drome. A palindrome is a word or phrase that is the same forwards and backwards.
 is a rea rrangement of letters. The palindrome does not need to be limited to just dictionary words.
 */
 
-func TestPalindromePermutations(t *testing.T) {
+func TestIsPalindromePermutationBitwise(t *testing.T) {
 	g := goblin.Goblin(t)
 
-	g.Describe("Palindrome Permutations", func() {
+	g.Describe("Palindrome Permutations (Bitwise)", func() {
 		g.It("Should return false if string is empty", func() {
-			g.Assert(a.IsPalindromePermutation("")).IsFalse()
+			g.Assert(a.IsPalindromePermutationBitwise("")).IsFalse()
 		})
 
 		g.It("Should return false if string is not a Palindrome permutation", func() {
-			g.Assert(a.IsPalindromePermutation("blaob")).IsFalse()
+			g.Assert(a.IsPalindromePermutationBitwise("blaob")).IsFalse()
 		})
 
 		g.It("Should return true if string is a Palindrome permutation", func() {
-			g.Assert(a.IsPalindromePermutation("tact coa")).IsTrue()
-			g.Assert(a.IsPalindromePermutation("Tact Coa")).IsTrue()
-			g.Assert(a.IsPalindromePermutation("cargofargoc")).IsTrue()
+			g.Assert(a.IsPalindromePermutationBitwise("tact coa")).IsTrue()
+			g.Assert(a.IsPalindromePermutationBitwise("Tact Coa")).IsTrue()
+			g.Assert(a.IsPalindromePermutationBitwise("cargofargoc")).IsTrue()
 		})
 	})
 }
 
-func BenchmarkPalindromePermutations(b *testing.B) {
+func BenchmarkPalindromePermutationsBitwise(b *testing.B) {
 
 	for n := 0; n < b.N; n++ {
-		a.IsPalindromePermutation("cargofargoc")
+		a.IsPalindromePermutationBitwise("cargofargoc")
 	}
 }
