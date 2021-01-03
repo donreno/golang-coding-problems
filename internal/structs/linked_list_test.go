@@ -46,6 +46,9 @@ func TestLinkedList(t *testing.T) {
 			ll.Add(3)
 
 			g.Assert(ll.ToSlice()).Eql([]interface{}{1, 2, 3})
+			g.Assert(ll.Get(0)).Eql(1)
+			g.Assert(ll.Get(1)).Eql(2)
+			g.Assert(ll.Get(2)).Eql(3)
 		})
 	})
 }

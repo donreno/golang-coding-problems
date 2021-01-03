@@ -7,8 +7,8 @@ type LinkedList struct {
 }
 
 type ListNode struct {
-	val  interface{}
-	next *ListNode
+	Val  interface{}
+	Next *ListNode
 }
 
 func (l *LinkedList) Empty() bool {
@@ -28,7 +28,7 @@ func (l *LinkedList) Head() interface{} {
 		return nil
 	}
 
-	return l.head.val
+	return l.head.Val
 }
 
 func (l *LinkedList) Tail() interface{} {
@@ -36,19 +36,19 @@ func (l *LinkedList) Tail() interface{} {
 		return nil
 	}
 
-	return l.tail.val
+	return l.tail.Val
 }
 
 func (l *LinkedList) Add(in interface{}) {
 	newNode := &ListNode{
-		val: in,
+		Val: in,
 	}
 
 	if l.Empty() {
 		l.head = newNode
 		l.tail = newNode
 	} else {
-		l.tail.next, l.tail = newNode, newNode
+		l.tail.Next, l.tail = newNode, newNode
 	}
 
 	l.size++
@@ -67,14 +67,14 @@ func (l *LinkedList) Remove(index int) {
 		if l.size == 1 {
 			l.head, l.tail = nil, nil
 		} else {
-			l.head = l.head.next
+			l.head = l.head.Next
 		}
 	} else {
-		prev, current := l.head, l.head.next
+		prev, current := l.head, l.head.Next
 
-		for i := 1; current != nil; prev, current, i = current, current.next, i+1 {
+		for i := 1; current != nil; prev, current, i = current, current.Next, i+1 {
 			if i == index {
-				prev.next = current.next
+				prev.Next = current.Next
 				_ = current
 				break
 			}
@@ -89,9 +89,9 @@ func (l *LinkedList) Get(index int) interface{} {
 
 	currNode := l.head
 
-	for i := 0; currNode != nil; currNode, i = currNode.next, i+1 {
+	for i := 0; currNode != nil; currNode, i = currNode.Next, i+1 {
 		if i == index {
-			return currNode.val
+			return currNode.Val
 		}
 	}
 
@@ -107,8 +107,8 @@ func (l *LinkedList) ToSlice() (sliceList []interface{}) {
 
 	currNode := l.head
 
-	for i := 0; currNode != nil; currNode, i = currNode.next, i+1 {
-		sliceList[i] = currNode.val
+	for i := 0; currNode != nil; currNode, i = currNode.Next, i+1 {
+		sliceList[i] = currNode.Val
 	}
 
 	return
