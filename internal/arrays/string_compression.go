@@ -1,6 +1,9 @@
 package arrays
 
-import "strconv"
+import (
+	"bytes"
+	"strconv"
+)
 
 // CompressString returns a compressed version of the string if it's smaller than the original one
 func CompressString(s string) string {
@@ -9,6 +12,7 @@ func CompressString(s string) string {
 		return s
 	}
 
+	compressedBuffer := new(bytes.Buffer)
 	compressed := ""
 	sRunes := []rune(s)
 	countCurrentRune := 1
@@ -20,14 +24,16 @@ func CompressString(s string) string {
 		}
 
 		if sRunes[i] != currentChar || i == sLen-1 {
-			lastRuneCompress := string(currentChar) + strconv.Itoa(countCurrentRune)
-			compressed = compressed + lastRuneCompress
+			compressedBuffer.WriteRune(currentChar)
+			compressedBuffer.WriteString(strconv.Itoa(countCurrentRune))
 			currentChar = sRunes[i]
 			countCurrentRune = 1
 		} else {
 			countCurrentRune++
 		}
 	}
+
+	compressed = compressedBuffer.String()
 
 	if sLen < len(compressed) {
 		return s
