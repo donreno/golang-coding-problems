@@ -22,8 +22,10 @@ The structs package contains all the structs I have implemented im golang either
 | Linked List | [linked_list.go](internal/structs/linked_list.go) | [tests](internal/structs/linked_list_test.go) |
 | Queue | [queue.go](internal/structs/queue.go) | [tests](internal/structs/queue_test.go) |
 | Stack | [stack.go](internal/structs/stack.go) | [tests](internal/structs/stack_test.go) |
+| Hash Table | [hashtable.go](internal/structs/hashtable.go) | [tests](internal/structs/hashtable_test.go) |
 
-## arrays
+
+### arrays
 Arrays package contains coding problems corresponding to arrays or strings.
 
 | problem | implementation | tests |
@@ -38,3 +40,4 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | String compression | [string_compression.go](internal/arrays/string_compression.go) | [tests](internal/arrays/string_compression_test.go) |
 | Rotate Matrix | [rotate_matrix.go](internal/arrays/rotate_matrix.go) | [tests](internal/arrays/rotate_matrix_test.go) |
 | Zero Matrix | [zero_matrix.go](internal/arrays/zero_matrix.go) | [tests](internal/arrays/zero_matrix_test.go) |
+| Is String rotation | [string_rotation.go](internal/arrays/string_rotation.go) | [tests](internal/arrays/string_rotation_test.go) |
