@@ -36,3 +36,5 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Palindrome permutation | [palindrome_permutation.go](internal/arrays/palindrome_permutation.go) | [tests](internal/arrays/palindrome_permutation_test.go) |
 | One edit away | [one_away.go](internal/arrays/one_away.go) | [tests](internal/arrays/one_away_test.go) |
 | String compression | [string_compression.go](internal/arrays/string_compression.go) | [tests](internal/arrays/string_compression_test.go) |
+| Rotate Matrix | [rotate_matrix.go](internal/arrays/rotate_matrix.go) | [tests](internal/arrays/rotate_matrix_test.go) |
+| Zero Matrix | [zero_matrix.go](internal/arrays/zero_matrix.go) | [tests](internal/arrays/zero_matrix_test.go) |
