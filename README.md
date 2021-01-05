@@ -41,3 +41,10 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Rotate Matrix | [rotate_matrix.go](internal/arrays/rotate_matrix.go) | [tests](internal/arrays/rotate_matrix_test.go) |
 | Zero Matrix | [zero_matrix.go](internal/arrays/zero_matrix.go) | [tests](internal/arrays/zero_matrix_test.go) |
 | Is String rotation | [string_rotation.go](internal/arrays/string_rotation.go) | [tests](internal/arrays/string_rotation_test.go) |
+
+### Linked List
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Remove duplicates | [remove_dups.go](internal/linkedlist/remove_dups.go) | [tests](internal/linkedlist/remove_dups_test.go) |
+| Sum Lists | [remove_dups.go](internal/linkedlist/sum_lists.go) | [tests](internal/linkedlist/sum_lists_test.go) |

@@ -27,23 +27,20 @@ func TestLinkedList(t *testing.T) {
 
 			g.Assert(ll.Empty()).IsFalse()
 			g.Assert(ll.Size()).Eql(1)
-			g.Assert(ll.Head()).Eql(ll.Tail())
+			g.Assert(ll.Head).Eql(ll.Tail)
 		})
 
 		g.It("Should change size after remove", func() {
-			ll.Add("good")
-			ll.Add("ok")
-			ll.Add("bad")
+			ll.Add("good").Add("ok").Add("bad")
 
 			ll.Remove(2)
 
 			g.Assert(ll.Size()).Eql(2)
+			g.Assert(ll.ToSlice()).Eql([]interface{}{"good", "ok"})
 		})
 
 		g.It("Should be able to convert a LinkedList into a slice", func() {
-			ll.Add(1)
-			ll.Add(2)
-			ll.Add(3)
+			ll.Add(1).Add(2).Add(3)
 
 			g.Assert(ll.ToSlice()).Eql([]interface{}{1, 2, 3})
 			g.Assert(ll.Get(0)).Eql(1)
