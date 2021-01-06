@@ -13,6 +13,13 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// MakeListNode Makes a list node
+func MakeListNode(in interface{}) *ListNode {
+	return &ListNode{
+		Val: in,
+	}
+}
+
 // Empty returns true if empty
 func (l *LinkedList) Empty() bool {
 	if l.Head == nil {
