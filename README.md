@@ -51,3 +51,5 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Palindrome | [palindrome.go](internal/linkedlist/palindrome.go) | [tests](internal/linkedlist/palindrome_test.go) |
 | Palindrome (fastslow) | [palindrome_fastslow.go](internal/linkedlist/palindrome_fastslow.go) | [tests](internal/linkedlist/palindrome_fastslow_test.go) |
 | Loop detection | [loop_detection.go](internal/linkedlist/loop_detection.go) | [tests](internal/linkedlist/loop_detection_test.go) |
+| Partition | [partition.go](internal/linkedlist/partition.go) | [tests](internal/linkedlist/partition_test.go) |
+
