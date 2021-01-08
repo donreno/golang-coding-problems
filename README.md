@@ -1,4 +1,7 @@
 # golang-coding-problems
+
+[![Coverage Status](https://coveralls.io/repos/github/donreno/golang-coding-problems/badge.svg?branch=main)](https://coveralls.io/github/donreno/golang-coding-problems?branch=main)
+
 Just coding problems solved in golang
 
 ## Testing the code

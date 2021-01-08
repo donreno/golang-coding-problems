@@ -25,7 +25,16 @@ jobs:
       run: go test -v ./...
 
     - name: Prepare coverage
-      run: go test ./...  --coverprofile coverfile_out >> /dev/null
+      run: go test ./...  --covermode=count --coverprofile coverage.out >> /dev/null
     
     - name: Coverage
-      run: go tool cover -func coverfile_out
+      run: go tool cover -func coverage.out
+
+    - name: Convert coverage.out to coverage.lcov
+      uses: jandelgado/gcov2lcov-action@v1.0.6
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@v1.1.2
+      with:
+          github-token: ${{ secrets.github_token }}
+          path-to-lcov: coverage.lcov

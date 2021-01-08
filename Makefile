@@ -5,9 +5,9 @@ test:
 
 coverage: 
 	@echo "Coverfile..."
-	@go test ./...  --coverprofile coverfile_out >> /dev/null
-	@go tool cover -func coverfile_out
-	@go tool cover -html=coverfile_out -o coverfile_out.html
+	@go test ./...  --covermode=count --coverprofile coverage.out >> /dev/null
+	@go tool cover -func coverage.out
+	@go tool cover -html=coverage.out -o coverfile_out.html
 
 bench: 
 	@echo "Running tests..."
