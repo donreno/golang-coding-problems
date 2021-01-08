@@ -1,7 +1,7 @@
 
 test: 
 	@echo "Running tests..."
-	@go test ./... -bench=.
+	@go test ./... -v
 
 coverage: 
 	@echo "Coverfile..."
@@ -9,4 +9,8 @@ coverage:
 	@go tool cover -func coverfile_out
 	@go tool cover -html=coverfile_out -o coverfile_out.html
 
-.PHONY: test coverage
+bench: 
+	@echo "Running tests..."
+	@go test ./... -bench=. -run=^a
+
+.PHONY: test coverage bench

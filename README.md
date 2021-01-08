@@ -53,3 +53,9 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Loop detection | [loop_detection.go](internal/linkedlist/loop_detection.go) | [tests](internal/linkedlist/loop_detection_test.go) |
 | Partition | [partition.go](internal/linkedlist/partition.go) | [tests](internal/linkedlist/partition_test.go) |
 
+
+### Stacks and queues
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Three in one | [three_in_one.go](internal/stacks/three_in_one.go) | [tests](internal/stacks/three_in_one_test.go) |
