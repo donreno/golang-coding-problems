@@ -63,3 +63,6 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | --- | --- | --- |
 | Three in one | [three_in_one.go](internal/stacks/three_in_one.go) | [tests](internal/stacks/three_in_one_test.go) |
 | Min Stack | [min_stack.go](internal/stacks/min_stack.go) | [tests](internal/stacks/min_stack_test.go) |
+| Stack of plates | [stack_of_plates.go](internal/stacks/stack_of_plates.go) | [tests](internal/stacks/stack_of_plates_test.go) |
+| Queue via stacks | [queue_via_stacks.go](internal/stacks/queue_via_stacks.go) | [tests](internal/stacks/queue_via_stacks_test.go) |
+| Sorted Stack | [sorted_stack.go](internal/stacks/sorted_stack.go) | [tests](internal/stacks/sorted_stack_test.go) |
