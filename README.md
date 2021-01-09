@@ -62,3 +62,4 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | problem | implementation | tests |
 | --- | --- | --- |
 | Three in one | [three_in_one.go](internal/stacks/three_in_one.go) | [tests](internal/stacks/three_in_one_test.go) |
+| Min Stack | [min_stack.go](internal/stacks/min_stack.go) | [tests](internal/stacks/min_stack_test.go) |
