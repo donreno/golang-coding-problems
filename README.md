@@ -66,3 +66,4 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Stack of plates | [stack_of_plates.go](internal/stacks/stack_of_plates.go) | [tests](internal/stacks/stack_of_plates_test.go) |
 | Queue via stacks | [queue_via_stacks.go](internal/stacks/queue_via_stacks.go) | [tests](internal/stacks/queue_via_stacks_test.go) |
 | Sorted Stack | [sorted_stack.go](internal/stacks/sorted_stack.go) | [tests](internal/stacks/sorted_stack_test.go) |
+| Animal Shelter | [animal_shelter.go](internal/stacks/animal_shelter.go) | [tests](internal/stacks/animal_shelter_test.go) |
