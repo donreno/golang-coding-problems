@@ -73,3 +73,6 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | problem | implementation | tests |
 | --- | --- | --- |
 | Route between graph nodes | [route_between_nodes.go](internal/graphsntrees/route_between_nodes.go) | [tests](internal/graphsntrees/route_between_nodes_test.go) |
+| Minimal tree | [minimal_tree.go](internal/graphsntrees/minimal_tree.go) | [tests](internal/graphsntrees/minimal_tree_test.go) |
+| List of Depths | [list_of_depths.go](internal/graphsntrees/list_of_depths.go) | [tests](internal/graphsntrees/list_of_depths_test.go) |
+| Build Order | [build_order.go](internal/graphsntrees/build_order.go) | [tests](internal/graphsntrees/build_order_test.go) |
