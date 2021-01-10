@@ -11,6 +11,8 @@ const (
 	Cat = "cat"
 )
 
+// TODO: Improve as current queue struct wasn't open enough to implement with stack, I had to switch over to 2 queues to solve it in time
+
 // AnimalShelter interface to represent an animal shelter
 type AnimalShelter interface {
 	Enqueue(*Pet)

@@ -67,3 +67,9 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Queue via stacks | [queue_via_stacks.go](internal/stacks/queue_via_stacks.go) | [tests](internal/stacks/queue_via_stacks_test.go) |
 | Sorted Stack | [sorted_stack.go](internal/stacks/sorted_stack.go) | [tests](internal/stacks/sorted_stack_test.go) |
 | Animal Shelter | [animal_shelter.go](internal/stacks/animal_shelter.go) | [tests](internal/stacks/animal_shelter_test.go) |
+
+### Trees and Graphs
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Route between graph nodes | [route_between_nodes.go](internal/graphsntrees/route_between_nodes.go) | [tests](internal/graphsntrees/route_between_nodes_test.go) |
