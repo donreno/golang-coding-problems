@@ -76,3 +76,5 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Minimal tree | [minimal_tree.go](internal/graphsntrees/minimal_tree.go) | [tests](internal/graphsntrees/minimal_tree_test.go) |
 | List of Depths | [list_of_depths.go](internal/graphsntrees/list_of_depths.go) | [tests](internal/graphsntrees/list_of_depths_test.go) |
 | Build Order | [build_order.go](internal/graphsntrees/build_order.go) | [tests](internal/graphsntrees/build_order_test.go) |
+| BST Sequences | [bst_sequences.go](internal/graphsntrees/bst_sequences.go) | [tests](internal/graphsntrees/bst_sequences_test.go) |
+| Check Subtree | [check_subtree.go](internal/graphsntrees/check_subtree.go) | [tests](internal/graphsntrees/check_subtree_test.go) |
