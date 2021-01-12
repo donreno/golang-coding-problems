@@ -1,8 +1,8 @@
 package arrays
 
 import (
-	"bytes"
 	"strconv"
+	"strings"
 )
 
 // CompressString returns a compressed version of the string if it's smaller than the original one
@@ -12,7 +12,7 @@ func CompressString(s string) string {
 		return s
 	}
 
-	compressedBuffer := new(bytes.Buffer)
+	compressedBuffer := new(strings.Builder)
 	compressed := ""
 	sRunes := []rune(s)
 	countCurrentRune := 1
