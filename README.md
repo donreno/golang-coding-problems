@@ -28,8 +28,7 @@ The structs package contains all the structs I have implemented im golang either
 | Hash Table | [hashtable.go](internal/structs/hashtable.go) | [tests](internal/structs/hashtable_test.go) |
 
 
-### arrays
-Arrays package contains coding problems corresponding to arrays or strings.
+### Arrays and strings
 
 | problem | implementation | tests |
 | --- | --- | --- |
@@ -78,3 +77,12 @@ Arrays package contains coding problems corresponding to arrays or strings.
 | Build Order | [build_order.go](internal/graphsntrees/build_order.go) | [tests](internal/graphsntrees/build_order_test.go) |
 | BST Sequences | [bst_sequences.go](internal/graphsntrees/bst_sequences.go) | [tests](internal/graphsntrees/bst_sequences_test.go) |
 | Check Subtree | [check_subtree.go](internal/graphsntrees/check_subtree.go) | [tests](internal/graphsntrees/check_subtree_test.go) |
+
+### Bit Operations
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Binary to string  | [binary_to_string.go](internal/bits/binary_to_string.go) | [tests](internal/bits/binary_to_string_test.go) |
+| Bit swaps required | [bit_swaps_required.go](internal/bits/bit_swaps_required.go) | [tests](internal/bits/bit_swaps_required_test.go) |
+| Flip to win | [flip_to_win.go](internal/bits/flip_to_win.go) | [tests](internal/bits/flip_to_win_test.go) |
+| Insert| [insert.go](internal/bits/insert.go) | [tests](internal/bits/insert_test.go) |
