@@ -94,3 +94,4 @@ The structs package contains all the structs I have implemented im golang either
 | problem | implementation | tests |
 | --- | --- | --- |
 | Fibonacci  | [fibonacci.go](internal/recursionndynamic/fibonacci.go) | [tests](internal/recursionndynamic/fibonacci_test.go) |
+| Count Ways  | [count_ways.go](internal/recursionndynamic/count_ways.go) | [tests](internal/recursionndynamic/count_ways_test.go) |
