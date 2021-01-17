@@ -85,4 +85,5 @@ The structs package contains all the structs I have implemented im golang either
 | Binary to string  | [binary_to_string.go](internal/bits/binary_to_string.go) | [tests](internal/bits/binary_to_string_test.go) |
 | Bit swaps required | [bit_swaps_required.go](internal/bits/bit_swaps_required.go) | [tests](internal/bits/bit_swaps_required_test.go) |
 | Flip to win | [flip_to_win.go](internal/bits/flip_to_win.go) | [tests](internal/bits/flip_to_win_test.go) |
-| Insert| [insert.go](internal/bits/insert.go) | [tests](internal/bits/insert_test.go) |
+| Insert | [insert.go](internal/bits/insert.go) | [tests](internal/bits/insert_test.go) |
+| Pairwise Swap | [pairwise_swap.go](internal/bits/pairwise_swap.go) | [tests](internal/bits/pairwise_swap_test.go) |
