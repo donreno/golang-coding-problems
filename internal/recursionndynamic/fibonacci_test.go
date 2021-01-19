@@ -40,9 +40,3 @@ func BenchmarkMemoFibo(b *testing.B) {
 		r.MemoFibonacci(n)
 	}
 }
-
-func BenchmarkBottomUpFibo(b *testing.B) {
-	for n := 0; n < b.N; n++ {
-		r.BottomupDPFibonacci(n)
-	}
-}
