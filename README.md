@@ -96,3 +96,6 @@ The structs package contains all the structs I have implemented im golang either
 | Fibonacci  | [fibonacci.go](internal/recursionndynamic/fibonacci.go) | [tests](internal/recursionndynamic/fibonacci_test.go) |
 | Count Ways  | [count_ways.go](internal/recursionndynamic/count_ways.go) | [tests](internal/recursionndynamic/count_ways_test.go) |
 | Robot in a grid  | [robot_in_a_grid.go](internal/recursionndynamic/robot_in_a_grid.go) | [tests](internal/recursionndynamic/robot_in_a_grid_test.go) |
+| Magic Index  | [magic_index.go](internal/recursionndynamic/magic_index.go) | [tests](internal/recursionndynamic/magic_index_test.go) |
+| Powerset  | [power_set.go](internal/recursionndynamic/power_set.go) | [tests](internal/recursionndynamic/power_set_test.go) |
+| Recursive Multiply  | [recursive_multiply.go](internal/recursionndynamic/recursive_multiply.go) | [tests](internal/recursionndynamic/recursive_multiply_test.go) |
