@@ -101,3 +101,4 @@ The structs package contains all the structs I have implemented im golang either
 | Recursive Multiply  | [recursive_multiply.go](internal/recursionndynamic/recursive_multiply.go) | [tests](internal/recursionndynamic/recursive_multiply_test.go) |
 | Towers of Hanoi  | [towers_of_hanoi.go](internal/recursionndynamic/towers_of_hanoi.go) | [tests](internal/recursionndynamic/towers_of_hanoi_test.go) |
 | Perms without Dups  | [permutations_without_dups.go](internal/recursionndynamic/permutations_without_dups.go) | [tests](internal/recursionndynamic/permutations_without_dups_test.go) |
+| Perms with Dups  | [permutations_with_dups.go](internal/recursionndynamic/permutations_with_dups.go) | [tests](internal/recursionndynamic/permutations_with_dups_test.go) |

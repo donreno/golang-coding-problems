@@ -22,7 +22,7 @@ func TestPermutationsWithoutDups(t *testing.T) {
 			g.Assert(perms[1]).Eql("BA")
 		})
 
-		g.It("Should find all permutations for base case", func() {
+		g.It("Should find all permutations for three elements case", func() {
 			perms := r.PermutationsWithoutDups(threeElementsCase)
 			g.Assert(perms[0]).Eql("ABC")
 			g.Assert(perms[1]).Eql("BAC")
