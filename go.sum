@@ -1,3 +1,5 @@
 github.com/donreno/golang-coding-problems v0.0.0-20201211023012-1920bb3eb066 h1:zOjpaAJX+8ijl1QH39iMuk91nZNJht9q6+ycBS04jPY=
 github.com/franela/goblin v0.0.0-20201006155558-6240afcb2eb7 h1:eUae9KtuHjNg5e7DYkn57S/M/ndIICmV1bWs9ejYCx4=
 github.com/franela/goblin v0.0.0-20201006155558-6240afcb2eb7/go.mod h1:VzmDKDJVZI3aJmnRI9VjAn9nJ8qPPsN1fqzr9dqInIo=
+github.com/stretchr/stew v0.0.0-20130812190256-80ef0842b48b h1:DmfFjW6pLdaJNVHfKgCxTdKFI6tM+0YbMd0kx7kE78s=
+github.com/stretchr/stew v0.0.0-20130812190256-80ef0842b48b/go.mod h1:yS/5aMz+lfJhykLjlAGbnhUhZIvVapOvtmk0MtzHktE=
