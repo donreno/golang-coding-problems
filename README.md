@@ -102,3 +102,5 @@ The structs package contains all the structs I have implemented im golang either
 | Towers of Hanoi  | [towers_of_hanoi.go](internal/recursionndynamic/towers_of_hanoi.go) | [tests](internal/recursionndynamic/towers_of_hanoi_test.go) |
 | Perms without Dups  | [permutations_without_dups.go](internal/recursionndynamic/permutations_without_dups.go) | [tests](internal/recursionndynamic/permutations_without_dups_test.go) |
 | Perms with Dups  | [permutations_with_dups.go](internal/recursionndynamic/permutations_with_dups.go) | [tests](internal/recursionndynamic/permutations_with_dups_test.go) |
+| Stack of boxes  | [stack_of_boxes_recursive.go](internal/recursionndynamic/stack_of_boxes_recursive.go) | [tests](internal/recursionndynamic/stack_of_boxes_recursive_test.go) |
+| Stack of boxes (Optimized)  | [stack_of_boxes.go](internal/recursionndynamic/stack_of_boxes.go) | [tests](internal/recursionndynamic/stack_of_boxes_test.go) |
