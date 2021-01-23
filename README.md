@@ -103,4 +103,5 @@ The structs package contains all the structs I have implemented im golang either
 | Perms without Dups  | [permutations_without_dups.go](internal/recursionndynamic/permutations_without_dups.go) | [tests](internal/recursionndynamic/permutations_without_dups_test.go) |
 | Perms with Dups  | [permutations_with_dups.go](internal/recursionndynamic/permutations_with_dups.go) | [tests](internal/recursionndynamic/permutations_with_dups_test.go) |
 | Stack of boxes  | [stack_of_boxes_recursive.go](internal/recursionndynamic/stack_of_boxes_recursive.go) | [tests](internal/recursionndynamic/stack_of_boxes_recursive_test.go) |
-| Stack of boxes (Optimized)  | [stack_of_boxes.go](internal/recursionndynamic/stack_of_boxes.go) | [tests](internal/recursionndynamic/stack_of_boxes_test.go) |
+| Stack of boxes (Grouped by surface not 100% optimized)  | [stack_of_boxes.go](internal/recursionndynamic/stack_of_boxes.go) | [tests](internal/recursionndynamic/stack_of_boxes_test.go) |
+| Boolean evaluation  | [boolean_evaluation.go](internal/recursionndynamic/boolean_evaluation.go) | [tests](internal/recursionndynamic/boolean_evaluation_test.go) |
