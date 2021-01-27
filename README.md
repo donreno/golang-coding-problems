@@ -112,3 +112,4 @@ The structs package contains all the structs I have implemented im golang either
 | --- | --- | --- |
 | Quick Sort  | [quicksort.go](internal/sorting/quicksort.go) | [tests](internal/sorting/quicksort_test.go) |
 | Merge Sort  | [mergesort.go](internal/sorting/mergesort.go) | [tests](internal/sorting/mergesort_test.go) |
+| Binary Search  | [binary_search.go](internal/sorting/binary_search.go) | [tests](internal/sorting/binary_search_test.go) |
