@@ -105,3 +105,10 @@ The structs package contains all the structs I have implemented im golang either
 | Stack of boxes  | [stack_of_boxes_recursive.go](internal/recursionndynamic/stack_of_boxes_recursive.go) | [tests](internal/recursionndynamic/stack_of_boxes_recursive_test.go) |
 | Stack of boxes (Grouped by surface not 100% optimized)  | [stack_of_boxes.go](internal/recursionndynamic/stack_of_boxes.go) | [tests](internal/recursionndynamic/stack_of_boxes_test.go) |
 | Boolean evaluation  | [boolean_evaluation.go](internal/recursionndynamic/boolean_evaluation.go) | [tests](internal/recursionndynamic/boolean_evaluation_test.go) |
+
+## Sorting and searching
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Quick Sort  | [quicksort.go](internal/sorting/quicksort.go) | [tests](internal/sorting/quicksort_test.go) |
+| Merge Sort  | [mergesort.go](internal/sorting/mergesort.go) | [tests](internal/sorting/mergesort_test.go) |
