@@ -31,10 +31,10 @@ func TestSortedMerge(t *testing.T) {
 
 		g.BeforeEach(func() {
 			a = make([]int, 6)
-			a[0] = 20
-			a[1] = 2
-			a[2] = 3
-			b = []int{0, 4, 1}
+			a[0] = 2
+			a[1] = 3
+			a[2] = 20
+			b = []int{0, 1, 4}
 		})
 	})
 }

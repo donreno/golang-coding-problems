@@ -24,19 +24,22 @@ func searchInRotatedArray(arr []int, target, low, high int) int {
 		return mid
 	}
 
-	//  are we in a loop
-	if arr[low] > arr[high] {
-		left := searchInRotatedArray(arr, target, low, mid)
+	isLoop := arr[low] > arr[high]
 
-		if left != -1 {
-			return left
+	// first option will be check if not loop, if not we do binary search
+	if !isLoop {
+		if arr[low] < target && arr[mid] > target {
+			return searchInRotatedArray(arr, target, low, mid)
 		}
 
 		return searchInRotatedArray(arr, target, mid+1, high)
 	}
 
-	if arr[low] < target && arr[mid] > target {
-		return searchInRotatedArray(arr, target, low, mid)
+	// If we reached here this is a loop, we'll "bruteforce" until we get a subarray which is not loop or we find the target
+	left := searchInRotatedArray(arr, target, low, mid)
+
+	if left != -1 {
+		return left
 	}
 
 	return searchInRotatedArray(arr, target, mid+1, high)

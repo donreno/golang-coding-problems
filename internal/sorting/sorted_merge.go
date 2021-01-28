@@ -11,56 +11,21 @@ func SortedMerge(a, b []int) error {
 		return errors.New("Invalid length arrays")
 	}
 
-	mergeArrs(a, b)
+	indexA := aLen - bLen - 1
+	indexB := bLen - 1
+	indexMerged := aLen - 1
 
-	sortedMergeSort(a, make([]int, aLen), 0, aLen-1)
-
-	return nil
-}
-
-func mergeArrs(a, b []int) {
-	aLen := len(a)
-	bLen := len(b)
-	aLastIndex := aLen - bLen - 1
-
-	for i := 0; i < bLen; i++ {
-		a[aLastIndex+1+i] = b[i]
-	}
-}
-
-func sortedMergeSort(a, temp []int, left, right int) {
-	if left < right {
-		mid := int((left + right) / 2)
-
-		sortedMergeSort(a, temp, left, mid)
-		sortedMergeSort(a, temp, mid+1, right)
-		mergeWithSortedMerge(a, temp, left, mid, right)
-	}
-}
-
-func mergeWithSortedMerge(a, temp []int, left, mid, right int) {
-	for i := left; i <= right; i++ {
-		temp[i] = a[i]
-	}
-
-	tempLeft, current := left, left
-	tempRight := mid + 1
-
-	for tempLeft <= mid && tempRight <= right {
-		if temp[tempLeft] <= temp[tempRight] {
-			a[current] = temp[tempLeft]
-			tempLeft++
+	for indexB >= 0 {
+		if indexA >= 0 && a[indexA] > b[indexB] {
+			a[indexMerged] = a[indexA]
+			indexA--
 		} else {
-			a[current] = temp[tempRight]
-			tempRight++
+			a[indexMerged] = b[indexB]
+			indexB--
 		}
 
-		current++
+		indexMerged--
 	}
 
-	remainingElems := mid - tempLeft
-
-	for i := 0; i <= remainingElems; i++ {
-		a[current+i] = temp[tempLeft+i]
-	}
+	return nil
 }
