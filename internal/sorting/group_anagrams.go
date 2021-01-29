@@ -19,6 +19,7 @@ func (c characters) Swap(i, j int) {
 	c[i], c[j] = c[j], c[i]
 }
 
+// GroupAnagrams groups anagrams
 func GroupAnagrams(arr []string) {
 	anagramsMap := make(map[string]*structs.LinkedList)
 

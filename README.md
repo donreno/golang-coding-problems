@@ -118,3 +118,4 @@ The structs package contains all the structs I have implemented im golang either
 | Group Anagrams  | [group_anagrams.go](internal/sorting/group_anagrams.go) | [tests](internal/sorting/group_anagrams_test.go) |
 | Sorted Search No Size (Listy)  | [listy.go](internal/sorting/listy.go) | [tests](internal/sorting/listy_test.go) |
 | Sparse Search  | [sparse_search.go](internal/sorting/sparse_search.go) | [tests](internal/sorting/sparse_search_test.go) |
+| Check duplicates  | [check_duplicates.go](internal/sorting/check_duplicates.go) | [tests](internal/sorting/check_duplicates_test.go) |
