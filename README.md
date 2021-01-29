@@ -116,3 +116,5 @@ The structs package contains all the structs I have implemented im golang either
 | Sorted merge  | [sorted_merge.go](internal/sorting/sorted_merge.go) | [tests](internal/sorting/sorted_merge_test.go) |
 | Search in rotated array  | [search_in_rotated_array.go](internal/sorting/search_in_rotated_array.go) | [tests](internal/sorting/search_in_rotated_array_test.go) |
 | Group Anagrams  | [group_anagrams.go](internal/sorting/group_anagrams.go) | [tests](internal/sorting/group_anagrams_test.go) |
+| Sorted Search No Size (Listy)  | [listy.go](internal/sorting/listy.go) | [tests](internal/sorting/listy_test.go) |
+| Sparse Search  | [sparse_search.go](internal/sorting/sparse_search.go) | [tests](internal/sorting/sparse_search_test.go) |
