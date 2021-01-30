@@ -121,4 +121,5 @@ The structs package contains all the structs I have implemented im golang either
 | Check duplicates  | [check_duplicates.go](internal/sorting/check_duplicates.go) | [tests](internal/sorting/check_duplicates_test.go) |
 | Sorted Matrix Search  | [sorted_matrix_search.go](internal/sorting/sorted_matrix_search.go) | [tests](internal/sorting/sorted_matrix_search_test.go) |
 | Rank from stream  | [rank_from_stream.go](internal/sorting/rank_from_stream.go) | [tests](internal/sorting/rank_from_stream_test.go) |
+| Peaks and Valleys  | [peaks_and_valleys.go](internal/sorting/peaks_and_valleys.go) | [tests](internal/sorting/peaks_and_valleys_test.go) |
 
