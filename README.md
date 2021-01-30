@@ -120,3 +120,5 @@ The structs package contains all the structs I have implemented im golang either
 | Sparse Search  | [sparse_search.go](internal/sorting/sparse_search.go) | [tests](internal/sorting/sparse_search_test.go) |
 | Check duplicates  | [check_duplicates.go](internal/sorting/check_duplicates.go) | [tests](internal/sorting/check_duplicates_test.go) |
 | Sorted Matrix Search  | [sorted_matrix_search.go](internal/sorting/sorted_matrix_search.go) | [tests](internal/sorting/sorted_matrix_search_test.go) |
+| Rank from stream  | [rank_from_stream.go](internal/sorting/rank_from_stream.go) | [tests](internal/sorting/rank_from_stream_test.go) |
+
