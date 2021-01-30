@@ -39,6 +39,7 @@ func RankFromStream(stream *BinaryTreeNode, elem int) int {
 		return 0
 	}
 
+	// If the item is equal to val or greater than, then I want to look to the left
 	if stream.Val >= elem {
 		if stream.Left != nil {
 			return RankFromStream(stream.Left, elem)

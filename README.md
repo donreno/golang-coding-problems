@@ -123,3 +123,8 @@ The structs package contains all the structs I have implemented im golang either
 | Rank from stream  | [rank_from_stream.go](internal/sorting/rank_from_stream.go) | [tests](internal/sorting/rank_from_stream_test.go) |
 | Peaks and Valleys  | [peaks_and_valleys.go](internal/sorting/peaks_and_valleys.go) | [tests](internal/sorting/peaks_and_valleys_test.go) |
 
+## Sync and concurrency
+
+| problem | implementation | tests |
+| --- | --- | --- |
+| Dining Philosophers  | [dining_philosophers.go](internal/concurrency/dining_philosophers.go) | [tests](internal/concurrency/dining_philosophers_test.go) |

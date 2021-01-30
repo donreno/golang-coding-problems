@@ -3,7 +3,6 @@ package sorting_test
 import (
 	s "golang-coding-problems/internal/sorting"
 	"testing"
-	"time"
 
 	goblin "github.com/franela/goblin"
 )
@@ -15,7 +14,6 @@ func TestRankFromStream(t *testing.T) {
 		var stream *s.BinaryTreeNode
 
 		g.It("Should return the correct rank for given number", func() {
-			g.Timeout(time.Minute * 5)
 			g.Assert(s.RankFromStream(stream, 1)).Eql(0)
 			g.Assert(s.RankFromStream(stream, 3)).Eql(1)
 			g.Assert(s.RankFromStream(stream, 4)).Eql(2)
