@@ -13,4 +13,9 @@ bench:
 	@echo "Running tests..."
 	@go test ./... -bench=. -run=^a
 
+badge:
+	@echo "Creating Badge..."
+	@./badge.sh > /dev/null
+	@echo "Badge created!"
+
 .PHONY: test coverage bench

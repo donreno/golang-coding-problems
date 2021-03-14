@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 jobs:
   test:
-    name: CodeCov
+    name: Test Coverage
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.x
@@ -21,14 +21,7 @@ jobs:
         run: |
           CVPKG=$(go list ./... | grep -v mocks | tr '\n' ',')
           go test -coverpkg=${CVPKG} -coverprofile=coverage.out -covermode=count  ./...
-      - name: Setup gcloud cli
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          version: '290.0.1'
-          project_id: ${{ secrets.PROJECT_ID }}
-          service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          export_default_credentials: true
-      - name: Publish cod cov badge
+      - name: Coverage badge
         run: |
           set -x
           total=`go tool cover -func=coverage.out | grep total | grep -Eo '[0-9]+\.[0-9]+'`
@@ -39,6 +32,4 @@ jobs:
           else
             COLOR=orange
           fi
-          curl "https://img.shields.io/badge/coavrege-$total%25-$COLOR" > badge.svg
-          gsutil  -h "Cache-Control: no-cache" cp badge.svg gs://${SOME_BUCKET}/${PROJECT_NAME}/codcov.svg
-          gsutil acl ch -u AllUsers:R gs://${SOME_BUCKET}/${PROJECT_NAME}/codcov.svg
+          curl "https://img.shields.io/badge/coverage-$total%25-$COLOR" > badge.svg
