@@ -2,21 +2,18 @@ package googleinterview
 
 // MoveZerosToLeft moves all zeroes to left
 func MoveZerosToLeft(arr []int) []int {
-	lastIndex, firstZeroIndex, lastZeroIndex := len(arr)-1, -1, -1
+	backwardIndex, lastZeroIndex := len(arr)-1, -1
 
-	for lastIndex >= 0 && firstZeroIndex != 0 {
-		currentVal := arr[lastIndex]
-		if firstZeroIndex == -1 && lastZeroIndex == -1 && currentVal == 0 {
-			firstZeroIndex, lastZeroIndex = lastIndex, lastIndex
-		} else if currentVal == 0 {
-			firstZeroIndex--
+	for backwardIndex >= 0 {
+		currentVal := arr[backwardIndex]
+		if lastZeroIndex == -1 && currentVal == 0 {
+			lastZeroIndex = backwardIndex
 		} else if lastZeroIndex != -1 && currentVal != 0 {
-			swap(arr, lastIndex, lastZeroIndex)
+			swap(arr, backwardIndex, lastZeroIndex)
 			lastZeroIndex--
-			firstZeroIndex--
 		}
 
-		lastIndex--
+		backwardIndex--
 	}
 
 	return arr
