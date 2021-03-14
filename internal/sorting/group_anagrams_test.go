@@ -23,9 +23,9 @@ func TestGroupAnagrams(t *testing.T) {
 			g.Assert(arr[0]).Eql("acre")
 			g.Assert(arr[1]).Eql("crea")
 			g.Assert(arr[2]).Eql("race")
-			g.Assert(arr[3]).Eql("batman")
-			g.Assert(arr[4]).Eql("tabman")
-			g.Assert(arr[5]).Eql("beer")
+			g.Assert(arr[3]).Eql("beer")
+			g.Assert(arr[4]).Eql("batman")
+			g.Assert(arr[5]).Eql("tabman")
 		})
 	})
 }

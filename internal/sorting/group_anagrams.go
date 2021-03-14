@@ -22,6 +22,7 @@ func (c characters) Swap(i, j int) {
 // GroupAnagrams groups anagrams
 func GroupAnagrams(arr []string) {
 	anagramsMap := make(map[string]*structs.LinkedList)
+	keys := []string{}
 
 	for _, s := range arr {
 		chars := characters([]rune(s))
@@ -30,14 +31,17 @@ func GroupAnagrams(arr []string) {
 
 		if _, found := anagramsMap[key]; !found {
 			anagramsMap[key] = new(structs.LinkedList)
+			keys = append(keys, key)
 		}
 
 		anagramsMap[key].Add(s)
 	}
 
+	sort.Strings(keys)
+
 	i := 0
-	for _, l := range anagramsMap {
-		for _, elem := range l.ToSlice() {
+	for _, key := range keys {
+		for _, elem := range anagramsMap[key].ToSlice() {
 			s := elem.(string)
 
 			arr[i] = s
