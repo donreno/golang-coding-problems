@@ -128,3 +128,9 @@ The structs package contains all the structs I have implemented im golang either
 | problem | implementation | tests |
 | --- | --- | --- |
 | Dining Philosophers  | [dining_philosophers.go](internal/concurrency/dining_philosophers.go) | [tests](internal/concurrency/dining_philosophers_test.go) |
+
+## Google coding problems
+Some google supposed to be common interview coding questions [here](internal/googleinterview)
+
+## Cracking the coding interview vids
+[Here](internal/crackingthecodinginterview) are some problems, structs and algorithms from cracking the coding interview vids from this youtube playlist https://www.youtube.com/playlist?list=PLX6IKgS15Ue02WDPRCmYKuZicQHit9kFt
