@@ -2,7 +2,6 @@ package crackingthecodinginterview_test
 
 import (
 	ctci "golang-coding-problems/internal/crackingthecodinginterview"
-	"time"
 
 	"testing"
 
@@ -16,7 +15,6 @@ func TestCountPaths(t *testing.T) {
 		var grid [][]int
 
 		g.It("Should find the right number of ways to get to the exit", func() {
-			g.Timeout(time.Minute * 5)
 			g.Assert(ctci.FindPathsDynamic(grid)).Eql(27)
 		})
 
