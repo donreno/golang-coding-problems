@@ -3,6 +3,7 @@ package linkedlist_test
 import (
 	l "golang-coding-problems/internal/linkedlist"
 	s "golang-coding-problems/internal/structs"
+	"time"
 
 	"testing"
 
@@ -16,6 +17,7 @@ func TestMergeKSortedLinkedLists(t *testing.T) {
 		var kLists []*s.ListNode
 
 		g.It("Merge K sorted LL should result in expected merged list", func() {
+			g.Timeout(5 * time.Minute)
 			mergedLL := l.MergeKSortedLinkedLists(kLists)
 
 			g.Assert(mergedLL.Val).Eql(1)
