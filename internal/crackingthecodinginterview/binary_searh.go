@@ -10,11 +10,12 @@ func binarySearchRecursive(arr []int, target, left, right int) bool {
 		return false
 	}
 
-	mid := int((left + right) / 2)
+	mid := left + int((right-left)/2)
+	current := arr[mid]
 
-	if arr[mid] == target {
+	if current == target {
 		return true
-	} else if target < arr[mid] {
+	} else if current > target {
 		return binarySearchRecursive(arr, target, left, mid-1)
 	} else {
 		return binarySearchRecursive(arr, target, mid+1, right)
@@ -26,11 +27,12 @@ func BinarySearchNonRecursive(arr []int, target int) bool {
 	left, right := 0, len(arr)-1
 
 	for left <= right {
-		mid := int((left + right) / 2)
+		mid := left + int((right-left)/2)
+		current := arr[mid]
 
-		if arr[mid] == target {
+		if current == target {
 			return true
-		} else if target < arr[mid] {
+		} else if current > target {
 			right = mid - 1
 		} else {
 			left = mid + 1

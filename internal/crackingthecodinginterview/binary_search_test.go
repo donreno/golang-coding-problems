@@ -18,7 +18,7 @@ func TestBinarySearch(t *testing.T) {
 			g.Assert(ctci.BinarySearchRecursive(arr, 121)).IsTrue()
 		})
 
-		g.It("Recursive: Should return false if element is on array", func() {
+		g.It("Recursive: Should return false if element is not on array", func() {
 			g.Assert(ctci.BinarySearchRecursive(arr, 99)).IsFalse()
 		})
 
@@ -26,7 +26,7 @@ func TestBinarySearch(t *testing.T) {
 			g.Assert(ctci.BinarySearchNonRecursive(arr, 121)).IsTrue()
 		})
 
-		g.It("Non Recursive: Should return false if element is on array", func() {
+		g.It("Non Recursive: Should return false if element is not on array", func() {
 			g.Assert(ctci.BinarySearchNonRecursive(arr, 99)).IsFalse()
 		})
 
