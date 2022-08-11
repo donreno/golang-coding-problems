@@ -7,7 +7,6 @@ type Graph struct {
 
 // GraphNode a Graph node
 type GraphNode struct {
-	ID     int
 	Value  int
 	Childs []*GraphNode
 }
@@ -19,9 +18,9 @@ func MakeGraph() *Graph {
 	}
 }
 
-// GetNode gets a node by id
-func (g *Graph) GetNode(id int) *GraphNode {
-	return g.nodeLookup[id]
+// GetNode gets a node by Value
+func (g *Graph) GetNode(value int) *GraphNode {
+	return g.nodeLookup[value]
 }
 
 // AddNode adds node to graph
@@ -30,7 +29,7 @@ func (g *Graph) AddNode(node *GraphNode) {
 		return
 	}
 
-	g.nodeLookup[node.ID] = node
+	g.nodeLookup[node.Value] = node
 }
 
 // AddEdge adds an edge to a given source node to link to destination node
@@ -45,24 +44,25 @@ func (g *Graph) AddEdge(source, destination int) {
 
 // HasPathDFS checks if there is a path to a node with DFS algorithm
 func (g *Graph) HasPathDFS(source, destination int) bool {
-	srcNode := g.nodeLookup[source]
-	destNode := g.nodeLookup[destination]
-	return g.hasPathDFS(srcNode, destNode, make(map[int]bool))
+	visited := make(map[int]bool)
+	return g.hasPathDFS(source, destination, visited)
 }
 
-func (g *Graph) hasPathDFS(source, destination *GraphNode, visited map[int]bool) bool {
-	if visited[source.ID] {
+func (g *Graph) hasPathDFS(source, destination int, visited map[int]bool) bool {
+	if visited[source] {
 		return false
 	}
 
-	if source.ID == destination.ID {
+	visited[source] = true
+
+	if source == destination {
 		return true
 	}
 
-	visited[source.ID] = true
+	node := g.nodeLookup[source]
 
-	for _, child := range source.Childs {
-		if g.hasPathDFS(child, destination, visited) {
+	for _, child := range node.Childs {
+		if g.hasPathDFS(child.Value, destination, visited) {
 			return true
 		}
 	}
@@ -72,28 +72,21 @@ func (g *Graph) hasPathDFS(source, destination *GraphNode, visited map[int]bool)
 
 // HasPathBFS has path to a node using BFS
 func (g *Graph) HasPathBFS(source, destination int) bool {
-	srcNode := g.nodeLookup[source]
-	destNode := g.nodeLookup[destination]
-	nextToVisit := []*GraphNode{srcNode}
-	visited := make(map[int]bool)
 
-	var current *GraphNode
+	nextToVisit, current := make([]int, 0), 0
+	nextToVisit = append(nextToVisit, source)
 
 	for len(nextToVisit) > 0 {
 		current, nextToVisit = nextToVisit[0], nextToVisit[1:]
 
-		if current.ID == destNode.ID {
+		if current == destination {
 			return true
 		}
 
-		if visited[current.ID] {
-			continue
-		}
+		childs := g.nodeLookup[current].Childs
 
-		visited[current.ID] = true
-
-		for _, child := range current.Childs {
-			nextToVisit = append(nextToVisit, child)
+		for _, child := range childs {
+			nextToVisit = append(nextToVisit, child.Value)
 		}
 	}
 

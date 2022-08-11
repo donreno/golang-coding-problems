@@ -35,7 +35,6 @@ func TestGraph(t *testing.T) {
 
 			for i := 0; i <= 6; i++ {
 				graph.AddNode(&ctci.GraphNode{
-					ID:    i,
 					Value: i,
 				})
 			}
