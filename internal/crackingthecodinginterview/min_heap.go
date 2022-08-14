@@ -29,14 +29,14 @@ func getParentIndex(childIndex int) int {
 }
 
 func (h *MinHeap) hasLeftChild(index int) bool {
-	return getLeftChildIndex(index) < len(h.arr)
+	return getLeftChildIndex(index) < h.size
 }
 
 func (h *MinHeap) hasRightChild(index int) bool {
-	return getRightChildIndex(index) < len(h.arr)
+	return getRightChildIndex(index) < h.size
 }
 
-func hasParent(index int) bool {
+func (h *MinHeap) hasParent(index int) bool {
 	return getParentIndex(index) >= 0
 }
 
@@ -72,7 +72,7 @@ func (h *MinHeap) Poll() int {
 	}
 
 	item := h.arr[0]
-	h.arr = h.arr[1:]
+	h.arr[0] = h.arr[h.size-1]
 	h.size--
 
 	h.heapifyDown()
@@ -83,6 +83,7 @@ func (h *MinHeap) Poll() int {
 // Add adds an item to heap
 func (h *MinHeap) Add(item int) {
 	h.ensureExtraCapacity()
+
 	h.arr[h.size] = item
 	h.size++
 	h.heapifyUp()
@@ -90,25 +91,28 @@ func (h *MinHeap) Add(item int) {
 
 func (h *MinHeap) heapifyDown() {
 	index := 0
+
 	for h.hasLeftChild(index) {
 		smallerChildIndex := getLeftChildIndex(index)
+
 		if h.hasRightChild(index) && h.rightChild(index) < h.leftChild(index) {
 			smallerChildIndex = getRightChildIndex(index)
 		}
 
-		if h.arr[index] < h.arr[smallerChildIndex] {
-			break
-		} else {
+		if h.arr[index] > h.arr[smallerChildIndex] {
 			h.swap(index, smallerChildIndex)
-			index = smallerChildIndex
 		}
+
+		index = smallerChildIndex
 	}
 }
 
 func (h *MinHeap) heapifyUp() {
 	index := h.size - 1
-	for hasParent(index) && h.parent(index) > h.arr[index] {
-		h.swap(getParentIndex(index), index)
-		index = getParentIndex(index)
+
+	for h.hasParent(index) && h.parent(index) > h.arr[index] {
+		newIndex := getParentIndex(index)
+		h.swap(newIndex, index)
+		index = newIndex
 	}
 }
